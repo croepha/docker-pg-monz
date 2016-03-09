@@ -50,4 +50,4 @@ with open(zbx_conf, 'w') as f:
 
 os.makedirs('/var/run/zabbix', exist_ok=True)
 
-os.execlp('zabbix_agentd', '--foreground')
+os.execlp('zabbix_agentd', 'zabbix_agentd', '--foreground')
