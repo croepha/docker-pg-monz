@@ -1,0 +1,3 @@
+[submodule "pg_monz"]
+	path = pg_monz
+	url = https://github.com/pg-monz/pg_monz.git
