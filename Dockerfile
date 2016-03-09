@@ -10,4 +10,4 @@ RUN apt-get install -y  wget postgresql-client \
 COPY pg_monz/pg_monz/usr-local-bin/* entrypoint.py /usr/local/bin/
 COPY pg_monz/pg_monz/zabbix_agentd.d/userparameter_pgsql.conf /etc/zabbix/zabbix_agentd.d/pg_monz.conf
 
-ENTRYPOINT ['entrypoint.py']
+ENTRYPOINT ["entrypoint.py"]
