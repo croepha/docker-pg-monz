@@ -43,11 +43,16 @@ with open(zbx_conf, 'r') as f:
 
 with open(zbx_conf, 'w') as f:
     for line in zbx_conf_data:
-        if not line.strip().startswith(("Hostname=", "ServerActive=")):
+        if not line.strip().startswith((
+            'Hostname=',
+            'ServerActive=',
+            'Server='
+        )):
             f.write(line)
     f.write('ServerActive=%s%s\n' % (ZBXHOST, ZBXPORT))
     f.write('AllowRoot=1\n')
     f.write('LogType=console\n')
+    f.write('Server=%s' % ZBXHOST)
 
 os.makedirs('/var/run/zabbix', exist_ok=True)
 
