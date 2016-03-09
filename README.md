@@ -1,10 +1,14 @@
-Really simple pg_monz implementation in docker
+Really simple [pg_monz](https://github.com/pg-monz/pg_monz) implementation in docker
 
 To build:
 
-1. clone this repo
-2. `docker build -t docker-pg-monz docker-pg-monz`
+1. Clone this repo:
+`git clone https://github.com/croepha/docker-pg-monz.git`
 
+2. Build the image:
+`docker build -t docker-pg-monz docker-pg-monz`
+
+3. Run:
 If you have zabbix running in a docker container named `zabbix` and a 
 PostgreSQL server running in a container named `postgres` then you can run 
 the container with something like this:
