@@ -7,8 +7,7 @@ RUN apt-get install -y  wget postgresql-client \
   && apt-get update \
   && apt-get install -y zabbix-agent zabbix-sender
 
-COPY pg_monz/pg_monz/usr-local-bin/*  /usr/local/bin/
-COPY pg_monz/pg_monz/zabbix_agentd.d/userparameter_pgsql.conf /etc/zabbix/zabbix_agentd.conf.d/pg_monz.conf
+COPY pg_monz/pg_monz/usr-local-bin/* entrypoint.py /usr/local/bin/
+COPY pg_monz/pg_monz/zabbix_agentd.d/userparameter_pgsql.conf /etc/zabbix/zabbix_agentd.d/pg_monz.conf
 
-
-ENTRYPOINT
+ENTRYPOINT ['entrypoint.py']

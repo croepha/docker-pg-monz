@@ -45,9 +45,9 @@ with open(zbx_conf, 'w') as f:
     for line in zbx_conf_data:
         if not line.strip().startswith(["Hostname=", "ServerActive="]):
             f.write(line)
-        f.write('ServerActive=%s%s\n' % (ZBXHOST, ZBXPORT))
-        f.write('AllowRoot=1\n')
+    f.write('ServerActive=%s%s\n' % (ZBXHOST, ZBXPORT))
+    f.write('AllowRoot=1\n')
 
 os.makedirs('/var/run/zabbix', exist_ok=True)
 
-os.execlp()
+os.execlp('zabbix_agentd', '--foreground')
