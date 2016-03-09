@@ -52,7 +52,7 @@ with open(zbx_conf, 'w') as f:
     f.write('ServerActive=%s%s\n' % (ZBXHOST, ZBXPORT))
     f.write('AllowRoot=1\n')
     f.write('LogType=console\n')
-    f.write('Server=%s' % ZBXHOST)
+    f.write('Server=%s\n' % ZBXHOST)
 
 os.makedirs('/var/run/zabbix', exist_ok=True)
 
