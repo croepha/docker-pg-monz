@@ -39,6 +39,7 @@ if PGPASS:
         f.write('%s:%s:%s:%s:%s\n' % (
             PGHOST, PGPORT, PGDATABASE, PGROLE, PGPASS
         ))
+    os.chmod(PGPASSFILE, 0o0600)
 
 with open(pgsql_conf, 'w') as f:
     f.write(pgsql_conf_template % (
