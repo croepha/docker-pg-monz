@@ -53,7 +53,10 @@ with open(zbx_conf, 'w') as f:
         if not line.strip().startswith((
             'Hostname=',
             'ServerActive=',
-            'Server='
+            'Server=',
+            'AllowRoot=',
+            'LogType=',
+            'Server=',
         )):
             f.write(line)
     f.write('ServerActive=%s%s\n' % (ZBXHOST, ZBXPORT))
