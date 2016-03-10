@@ -36,9 +36,7 @@ PGDATABASE=%s
 
 if PGPASS:
     with open(PGPASSFILE, 'w') as f:
-        f.write('%s:%s:%s:%s:%s\n' % (
-            PGHOST, PGPORT, PGDATABASE, PGROLE, PGPASS
-        ))
+        f.write('*:*:*:*:%s\n' % PGPASS)
     os.chmod(PGPASSFILE, 0o0600)
 
 with open(pgsql_conf, 'w') as f:
