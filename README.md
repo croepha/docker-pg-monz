@@ -1,6 +1,6 @@
 Really simple [pg_monz](https://github.com/pg-monz/pg_monz) implementation in docker
 
-If you dont have auto-disovery configured, you are going to have to add a host manualy, in this example its called `pg_monz`.  Then if you have zabbix running in a docker container named `zabbix` and a 
+If you dont have auto-disovery configured, you are going to have to add a host manualy, in this example the Zabbix Agent's host is called `pg_monz`.  Then if you have zabbix running in a docker container named `zabbix` and a 
 PostgreSQL server running in a container named `postgres` then you can run 
 the container with something like this:
 
